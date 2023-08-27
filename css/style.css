@@ -95,7 +95,6 @@ body {
 
 /* Add more effects as needed */
 
-
 .btn.light {
   background: var(--orange-color);
 }
@@ -133,9 +132,9 @@ nav {
   top: 0;
   padding: 36px 0;
   z-index: 100;
-  transition:  all 500ms ease;
+  transition: all 500ms ease;
 }
-nav.scrolled{
+nav.scrolled {
   background-color: var(--dark-color);
   box-shadow: 0 16 14px -8px rgba(0, 0, 0, 0.3);
   border-radius: 0 0 8px 8px;
