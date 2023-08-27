@@ -49,7 +49,7 @@ body {
   font-size: 16px;
   text-decoration: none;
 }
-
+/* 
 .btn.dark {
   background: linear-gradient(
     180.3deg,
@@ -60,7 +60,42 @@ body {
 
 .btn.dark:hover {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+} */
+
+.btn.dark {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background: linear-gradient(
+    180.3deg,
+    rgb(63, 94, 251) 5.5%,
+    rgb(148, 54, 243) 90.2%
+  );
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.btn.dark:hover {
+  background: linear-gradient(to top, #8effa0 0%, #ff62a5 100%);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #023047;
+}
+
+.btn.dark:active {
+  transform: scale(0.95);
+}
+
+/* Add more effects as needed */
+
+
 .btn.light {
   background: var(--orange-color);
 }
@@ -95,8 +130,17 @@ nav {
   align-items: center;
   position: fixed;
   width: 1134px;
-  top: 36px;
+  top: 0;
+  padding: 36px 0;
   z-index: 100;
+  transition:  all 500ms ease;
+}
+nav.scrolled{
+  background-color: var(--dark-color);
+  box-shadow: 0 16 14px -8px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
 }
 
 nav .logo {
@@ -544,9 +588,31 @@ footer form input {
   color: #000;
   font-family: Poppins;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 200%;
+  width: 250px;
+  height: 39px;
+  padding: 8px 20px;
+}
+
+.submit-btn {
+  background-color: var(--darkblue-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
 }
 
 .copyright_para {
@@ -554,32 +620,13 @@ footer form input {
   margin-top: 60px;
 }
 
-.submit-btn {
-  background-color: var(--darkblue-color); 
-  border: none; 
-  color: white; 
-  padding: 10px 20px; 
-  text-align: center; 
-  text-decoration: none;
-  display: inline-block; 
-  font-size: 16px; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease;
-}
-
-/* Add a hover effect */
-.submit-btn:hover {
-  background-color: #45a049; 
-}
-
 .author {
-  color: #007bff; 
-  text-decoration: none; 
-  font-weight: bold; 
-  transition: color 0.3s ease; 
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .author:hover {
-  color: #0056b3; 
+  color: #0056b3;
 }
